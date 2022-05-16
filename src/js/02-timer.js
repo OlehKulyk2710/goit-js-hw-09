@@ -115,6 +115,7 @@ function checkSelectedDate(value) {
   newDate = value.getTime();
 
   if (newDate <= Date.now()) {
+    refs.startBtn.disabled = true;
     Notify.failure('Please choose a date in the future', {
       position: 'center-top',
       distance: '100px',
